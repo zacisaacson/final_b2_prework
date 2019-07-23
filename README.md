@@ -11,9 +11,9 @@
 ## Tasks
 
 1. Set up a many to many relationship between students and courses
-  * Courses should have a name
-  * Students should have a name
-  * Students should have a grade for each course they are associated with
+   * Courses should have a name
+   * Students should have a name
+   * Students should have a grade for each course they are associated with
 
 1. Complete the following user stories:
 
