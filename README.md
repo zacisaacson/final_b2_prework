@@ -13,7 +13,7 @@
 1. Set up a many to many relationship between students and courses
    * Courses should have a name
    * Students should have a name
-   * Students should have a grade for each course they are associated with
+   * Students should have a grade for each course they are associated with. This grade should be a decimal number.
 
 1. Complete the following user stories:
 
@@ -28,10 +28,10 @@ Then I see
 ```
 
 ```
-User Story 2, Course Index Page
+User Story 2, Course Show Page
 As a user,
-When I visit a course index page,
-Then I see each course in the system including:
+When I visit a course show page,
+Then I see:
 - the course's name
 - each student in the course listed in order from highest grade to lowest grade
 ```
