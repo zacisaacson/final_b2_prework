@@ -7,6 +7,7 @@
 * Clone your fork
 * Run `bundle`
 * Complete the tasks below
+* Push your code to your fork
 
 ## Tasks
 
