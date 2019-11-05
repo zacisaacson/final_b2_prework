@@ -13,7 +13,7 @@ RSpec.describe 'Course show page' do
     StudentCourse.create(student_id: @einstein.id, course_id: @calculus.id, grade: 100)
     StudentCourse.create(student_id: @turing.id, course_id: @calculus.id, grade: 95)
 
-    visit "/course/#{@calculus.id}"
+    visit "/courses/#{@calculus.id}"
 
     within '#student-0' do
       expect(page).to have_content(@einstein.name)
