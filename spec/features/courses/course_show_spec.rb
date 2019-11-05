@@ -19,15 +19,19 @@ RSpec.describe 'Course show page' do
     within '#student-0' do
       expect(page).to have_content(@einstein.name)
     end
+
     within '#student-1' do
       expect(page).to have_content(@turing.name)
     end
+
     within '#student-2' do
       expect(page).to have_content(@zac.name)
     end
+
   end
 
   it "can unenroll a student" do
+
     visit "/courses/#{@calculus.id}"
 
     within '#student-0' do
@@ -40,9 +44,10 @@ RSpec.describe 'Course show page' do
   end
 
   it "can enroll a new student" do
+
     visit "/courses/#{@calculus.id}"
 
-    expect(page).to have_content "Add New Student"
+    expect(page).to have_content("Add New Student")
 
     fill_in :name, with: "Johhny Bravo"
 
@@ -54,12 +59,4 @@ RSpec.describe 'Course show page' do
 
     expect(page).to have_content('Calculus')
   end
-
-  # When I visit a course show page,
-  # Then I see a form to enroll a new student in this course that has a single input field for the student name.
-  # When I type in the name of a student
-  # And I click the submit button
-  # Then a new student is created,
-  # And I am redirected to that student's show page where I see the course listed
-  # (no need for sad path testing i.e. name field is left blank, if the name already exists)
 end

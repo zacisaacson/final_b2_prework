@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   delete '/students/:id', to: 'student_courses#destroy'
 
   get '/courses/:id', to: 'courses#show'
+  post "/courses/:id", to: "student_courses#create"
+
 end
