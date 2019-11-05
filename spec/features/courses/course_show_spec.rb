@@ -40,7 +40,19 @@ RSpec.describe 'Course show page' do
   end
 
   it "can enroll a new student" do
-    
+    visit "/courses/#{@calculus.id}"
+
+    expect(page).to have_content "Add New Student"
+
+    fill_in :name, with: "Johhny Bravo"
+
+    click_button 'Submit'
+
+    new_student = Student.last
+
+    expect(current_path).to eq("/students/#{new_student.id}")
+
+    expect(page).to have_content('Calculus')
   end
 
   # When I visit a course show page,
