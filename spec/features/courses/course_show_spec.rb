@@ -38,9 +38,16 @@ RSpec.describe 'Course show page' do
 
     expect(page).to_not have_content('Calculus')
   end
-# As a user,
-# When I visit a course show page,
-# Then I see a button 'unenroll' next to each student's name
-# When I click this button,
-# Then I am redirected to that student's show page where I do not see the course listed
+
+  it "can enroll a new student" do
+    
+  end
+
+  # When I visit a course show page,
+  # Then I see a form to enroll a new student in this course that has a single input field for the student name.
+  # When I type in the name of a student
+  # And I click the submit button
+  # Then a new student is created,
+  # And I am redirected to that student's show page where I see the course listed
+  # (no need for sad path testing i.e. name field is left blank, if the name already exists)
 end
